@@ -1,0 +1,217 @@
+/* Variables */
+$font-family-base: 'Playfair Display', serif;
+$font-family-header: 'Playfair Display', serif;
+
+
+/* Global */
+
+body {
+  font-family: $font-family-base;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.cstm-button {
+  background-color: #833471;
+  border-color: #833471;
+  color: #ffffff;
+
+  &:hover {
+    background-color: #75092B ;
+    border-color: #75092B;
+    color: #ffffff;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  color: #833471;
+}
+
+
+.list-nav-color {
+  color: #833471;
+}
+
+
+/* Carousel */
+
+.cstm-carousel-inner, .cstm-carousel-item {
+  height: 100vh;
+}
+
+.cstm-carousel-caption-color {
+  color: #ffffff;
+}
+
+.cstm-carousel-caption-position {
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.carousel-item {
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h3 {
+    font-family: $font-family-header;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+  }
+}
+
+
+/* Products */
+
+.products {
+  .card-image {
+    overflow: hidden;
+
+    img {
+      transition: all 1s;
+
+      &:hover {
+        transform: scale(1.5, 1.5);
+      }
+    }
+  }
+}
+
+
+/* Inspirations */
+
+.inspirations .card-body {
+  z-index: 1;
+
+  &:hover {
+    z-index: 2;
+  }
+
+  h5 {
+    font-family: $font-family-header;
+    color: #fff;
+  }
+}
+
+.inspirations .card::after {
+  width: 100%;
+  height: 100%;
+  background: #833471;
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.inspirations .card:hover::after {
+  opacity: 0.7;
+}
+
+
+/* Conditions*/
+
+.conditions i {
+  color: #833471;
+  background-color: transparent;
+}
+
+
+/* Contact */
+
+.contact {
+  background-color: #D2B4DE;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      font-size: 0;
+      text-align: center;
+
+      i {
+        font-size: 16px;
+        color: #833471;
+        background-color: transparent;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+
+        &:hover {
+          color: #75092B;
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+}
+
+.cstm-card-contact {
+  background-color: transparent;
+  border: none;
+}
+
+/* Footer */
+
+footer {
+  background-color: #d7d9dc;
+
+  p {
+    line-height: 1.5rem;
+  }
+
+  li {
+    line-height: 1.1rem;
+  }
+}
+
+
+/* Media */
+
+@media (max-width: 768px) {
+  .products, .inspirations, .conditions, .contact {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .products .col-lg-3, .products .col-lg-9, .products .col-sm-6,
+  .inspirations .col-md-6, .inspirations .col-12,
+  .conditions .col-12, .conditions .col-md-4,
+  .contact .col-12, .contact .col-md-4  {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .products {
+    h2, .list-group {
+      margin-right: -15px;
+      margin-left: -15px;
+    }
+  }
+
+  .inspirations .row, .conditions .row, .contact .row {
+    margin-right: -27px;
+    margin-left: -27px;
+  }
+}
